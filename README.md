@@ -17,10 +17,12 @@ These operations help maintain and organize student information efficiently.
 ## 1️⃣ Student Records
 The student module stores and manages information related to students.
 Each student record contains details such as:
+```
 • Student ID
 • Student Name
 • Email Address
 • Grade
+```
 The system displays these details in a student list table.
 
 ## 2️⃣ Backend
@@ -83,6 +85,7 @@ Edutrack-student-module
 └── README.md
 ```
 The project is divided into backend, frontend, and database components to keep the system organized.
+
 
 
 
