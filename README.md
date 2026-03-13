@@ -1,111 +1,87 @@
-EduTrack – Student Module
+#EduTrack – Student Module
 
 This repository contains the Student Module of the EduTrack project.
-The purpose of this module is to manage student records within the EduTrack system.
-The student module is responsible for handling student-related information and maintaining student data in an organized way. It allows the system to store, retrieve, update, and manage student records effectively.
-This module is developed using a full-stack architecture, where the backend handles application logic, the database stores student information, and the frontend provides a user interface for interacting with the system.
+The module is used to manage student records in the system. It allows users to view, add, edit, and delete student information through a simple web interface.
+The system follows a basic full-stack structure, where the backend handles the application logic, the database stores student information, and the frontend displays the data in the browser.
 
-Scenario
-The EduTrack system is designed as a modular application where different modules manage different types of data.
-This repository focuses specifically on the Student Module, which manages student-related information and ensures that student data is properly stored and maintained.
-The module interacts with three main components:
-• Database – Stores student records
-• Backend Application – Processes student-related operations
-• Frontend Interface – Allows users to interact with the system
-These components work together to ensure that student information can be managed efficiently.
+#Scenario
 
-1️⃣ Student Database
-The student module maintains a database that stores all student-related information.
-The database plays an important role in ensuring that student records are organized and easily accessible.
-Each student record typically contains details such as:
+The Student Module manages student information in the EduTrack system.
+It performs basic operations on student data such as:
+• Viewing student records
+• Adding new students
+• Editing existing student details
+• Deleting student records
+These operations help maintain and organize student information efficiently.
+
+#1️⃣ Student Records
+The student module stores and manages information related to students.
+Each student record contains details such as:
 • Student ID
 • Student Name
 • Email Address
-• Course or Department
-• Semester
-The database ensures that all student data is stored securely and can be retrieved whenever required.
+• Grade
+The system displays these details in a student list table.
 
-2️⃣ Backend – Application Layer
-The backend of the student module is responsible for handling the internal functionality of the system.
-It manages the logic required to process student information and ensures communication between the frontend and the database.
-The backend performs tasks such as:
-• Receiving requests from the frontend
+#2️⃣ Backend
+The backend application manages the internal logic of the student module.
+It is responsible for:
 • Processing student data
-• Performing operations on the database
-• Returning responses to the frontend
-The backend follows a layered architecture which helps maintain clean and organized code.
+• Handling requests from the frontend
+• Communicating with the database
+• Returning responses to the user interface
 
-3️⃣ Model Layer
-The model layer represents the structure of student data in the application.
-It defines how student information is organized and how it corresponds to the database.
-This layer ensures that the application understands how student data should be stored and retrieved from the database.
+#3️⃣ Frontend
+The frontend interface displays the student information to the user.
+It provides options to:
+• View the student list
+• Add new students
+• Edit student information
+• Delete student records
+The frontend sends requests to the backend and displays the data in the browser.
 
-4️⃣ Repository Layer
-The repository layer manages communication between the application and the database.
-It is responsible for performing operations related to student records such as:
-• Retrieving student data
-• Saving new student information
-• Updating existing student records
-• Deleting student data
-This layer ensures that database interactions are handled efficiently.
+#4️⃣ Database
+The database stores all student records used in the module.
+It ensures that student information is stored securely and can be retrieved whenever required.
 
-5️⃣ Service Layer
-The service layer contains the business logic of the student module.
-It acts as an intermediate layer between the controller and the repository.
-The service layer is responsible for processing requests and ensuring that student operations are handled correctly.
-This layer helps maintain separation of responsibilities within the application.
+#5️⃣ Application Output
+The application displays a Student Management page where users can view and manage student records.
+The page includes:
+• Student List table
+• Add Student option
+• Edit and Delete actions for each student
 
-6️⃣ Controller Layer
-The controller layer manages requests coming from the frontend.
-It exposes endpoints that allow the frontend to interact with the backend application.
-Through the controller layer, the system can perform operations such as:
-• Viewing student records
-• Adding new students
-• Updating student details
-• Managing student information
-The controller ensures that requests are handled properly and responses are returned to the user.
+#6️⃣ Project Structure
+# 6️⃣ Project Structure
 
-7️⃣ Frontend – User Interface
-The frontend provides the user interface for interacting with the student module.
-It allows users to perform actions such as viewing and managing student information.
-The frontend communicates with the backend using APIs and displays the data retrieved from the system.
-Through the frontend interface, users can easily access and manage student records.
-
-8️⃣ Project Structure
-The project is organized into multiple directories to separate different parts of the application.
-Copy code
-
+```
 Edutrack-student-module
 │
 ├── backend
 │   ├── controller
+│   │   └── StudentController
+│   │
 │   ├── service
+│   │   └── StudentService
+│   │
 │   ├── repository
+│   │   └── StudentRepository
+│   │
 │   ├── model
+│   │   └── Student
+│   │
 │   └── resources
+│       └── application.properties
 │
 ├── frontend
-│   ├── src
-│   │   ├── app
-│   │   │   ├── components
-│   │   │   ├── services
-│   │   │   └── models
-│   │   └── assets
-│   ├── angular.json
-│   └── package.json
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 │
 ├── db
 │   └── database scripts
 │
 └── README.md
-This structure helps organize the project into clear sections and makes the application easier to maintain and understand.
-Future Enhancements
-The EduTrack system can be expanded by adding additional modules such as:
-• Attendance Management
-• Marks and Grades Management
-• Faculty Management
-• Administrative Dashboard
-• Reporting and Analytics
-These enhancements can extend the functionality of the EduTrack system and provide additional capabilities.
-
+```
+The project is divided into backend, frontend, and database components to keep the system organized.
 
