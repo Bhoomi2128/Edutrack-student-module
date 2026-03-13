@@ -53,6 +53,7 @@ The page includes:
 
 ## 6️⃣ Project Structure
 
+'''
 Edutrack-student-module
 │
 ├── backend
@@ -82,5 +83,6 @@ Edutrack-student-module
 └── README.md
 ```
 The project is divided into backend, frontend, and database components to keep the system organized.
+
 
 
